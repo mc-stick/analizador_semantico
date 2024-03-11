@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analizador Semántico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">Analizador semántico.</div>
+    <b> Codigos de ejemplo para copiar y pegar.</b>
+    <div class="container">
+      <div class="resultado"><b>CORRECTO.</b>
+        <div>
+          <p>function sumar(a, b) {</p>
+            <p>let resultado = a + b;</p>
+            <p>return resultado;</p>
+         <p>}</p> 
+        
+         <p></p> 
+         <p>let x = 10;</p> 
+          <p></p>
+          <p>if (x > 5) {</p>
+          <p>console.log('x es mayor que 5');</p>  
+          <p>} else {</p> 
+          
+          <p>console.log('x no es mayor que 5');</p>  
+          <p>}</p> 
+        </div>
+      </div>
+      <div class="resultado">
+       <b>sintaxis incorrecta.</b>
+        <div>
+          <p>function sumar(a, b) {</p>
+            <p>let  ce resultado = a + b;</p>
+            <p>return resultado;</p>
+         <p>}</p> 
+        
+         <p></p> 
+         <p>let x = 10;</p> 
+          <p></p>
+          <p>if (x > 5) {</p>
+          <p>console.log('x es mayor que 5');</p>  
+          <p>} else {</p> 
+          
+          <p>console.log('x no es mayor que 5');</p>  
+          <p>}</p> 
+        </div>
+      </div>
+      <div class="resultado">
+       <b>variables duplicadas.</b>
+        <div>
+          <p>function sumar(a, b) {</p>
+            <p>let resultado = a + b;</p>
+            <p>return resultado;</p>
+         <p>}</p> 
+        
+         <p></p> 
+         <p>let x = 10;</p> 
+         <p>const x = 1;</p> 
+          <p></p>
+          <p>if (x > 5) {</p>
+          <p>console.log('x es mayor que 5');</p>  
+          <p>} else {</p> 
+          
+          <p>console.log('x no es mayor que 5');</p>  
+          <p>}</p> 
+        </div>
+      </div>
+    </div>
+    
+  <div class="container">
+    <div class="text_area">
+      <label class="label" for="code">Ingrese el código:</label>
+      <textarea class="box" style="border-radius: 10px;" id="code"></textarea>
+       <button class="btn" onclick="analyze()">Analizar</button>
+    </div>
+    <div class="resultado">
+      <h2 class="h2">Resultado del análisis semántico:</h2>
+      <pre class="h2" id="result"></pre>
+    </div>
+  </div>
+
+  <script src="analizadorSemantico.js"></script>
+</body>
+</html>
